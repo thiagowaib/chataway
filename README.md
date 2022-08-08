@@ -1,2 +1,3 @@
-# wpp-url-texter
-An Android App built with React Native which starts conversations without needing to save new contacts.
+# Whatsapp URL Texter
+![Example Banner](https://blog.vtcall.com.br/wp-content/uploads/2021/11/wpp-business.jpeg "Example Banner")
+> An Android App built with React Native which starts conversations without needing to save new contacts. Comming soon...
