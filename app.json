@@ -25,7 +25,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#282828"
-      }
+      },
+      "package": "com.thiagowaib.wppurltexter"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
