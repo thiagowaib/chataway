@@ -1,24 +1,18 @@
-import useCachedResources from './hooks/useCachedResources';
 import React from 'react';
-import { NativeBaseProvider, extendTheme, Box } from 'native-base';
+import { NativeBaseProvider, extendTheme} from 'native-base';
+
+import ScreenStack from './navigation/ScreenStack';
 
 export default function App() {
-  const isLoadingComplete = useCachedResources();
-
-  if (!isLoadingComplete) {
-    return null;
-  } else {
-
     const theme = extendTheme({
       colors: {
         green: {
-          100: '#567A04',
-          200: '#D4CF6D'
+          100: '#117900',
+          200: '#1A9C94'
         },
         purple: {
           100: '#54387F',
           200: '#9783A9',
-          300: '#D7A3B6'
         },
         secondary: {
           100: '#282828',
@@ -34,7 +28,7 @@ export default function App() {
     })
     return (
       <NativeBaseProvider theme={theme}>
+        <ScreenStack/>
       </NativeBaseProvider>
     );
-  }
 }
