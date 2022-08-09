@@ -10,9 +10,15 @@ export default function UrlTexter(){
   const [number, setNumber] = useState<string>("")
   const [isValid, setIsValid] = useState<boolean>(false)
 
-  let numberMask = [
+  let BRnumberMask = [
     '(', /\d/, /\d/, ')', ' ',
     /\d/, /\d/, /\d/, /\d/, /\d/, '-',
+    /\d/, /\d/, /\d/, /\d/
+  ]
+
+  let USnumberMask = [
+    '(', /\d/, /\d/, /\d/, ')', ' ',
+    /\d/, /\d/, /\d/,
     /\d/, /\d/, /\d/, /\d/
   ]
   
@@ -24,7 +30,9 @@ export default function UrlTexter(){
   }
 
   const validateNumber = (number:string) => {
-    if(number.length === 11)
+    if(country === "BR" && number.length === 11)
+      setIsValid(true)
+    else if(country === "US" && number.length === 10)
       setIsValid(true)
     else
       setIsValid(false)
@@ -100,7 +108,7 @@ export default function UrlTexter(){
             validateNumber(filterFirstZero(unmasked))
             setNumber(filterFirstZero(unmasked))
           }}
-          mask={numberMask}
+          mask={country==="BR"?BRnumberMask:USnumberMask}
           style={{
             color: "#F5F5F5",
             paddingHorizontal: 10,
@@ -109,7 +117,7 @@ export default function UrlTexter(){
             borderBottomWidth: 1,
             fontSize: 16,
           }}
-          placeholder="(xx) xxxxx-xxxx"
+          placeholder={country==="BR"?"(xx) xxxxx-xxxx":"(xxx) xxxxxxx"}
           placeholderTextColor="#A2A2A2"
         />
         <Button
