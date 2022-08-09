@@ -26,7 +26,7 @@ export default function BottomTab() {
         safeAreaLeft
         safeAreaRight
         bg={"secondary.100"}
-        borderTopColor={"green.200"}
+        borderTopColor={currentScreen==="UrlTexter"?"green.200":"purple.200"}
         borderTopWidth={2}
         justifyContent={"space-evenly"}
         py={3}
@@ -37,7 +37,7 @@ export default function BottomTab() {
             alignItems={"center"}
             >
               <Text
-              color={"green.200"}
+              color={currentScreen==="UrlTexter"?"green.200":"purple.200"}
               px={7}
               py={3}
               fontSize={18}
@@ -53,12 +53,12 @@ export default function BottomTab() {
             alignItems={"center"}
             >
               <Text
-              color={"green.200"}
+              color={currentScreen==="UrlTexter"?"green.200":"purple.200"}
               fontSize={18}
               px={7}
               py={3}
               fontWeight={700}
-              borderBottomColor={currentScreen==="AboutApp"?"green.200":"secondary.100"}
+              borderBottomColor={currentScreen==="AboutApp"?"purple.200":"secondary.100"}
               borderBottomWidth={1.5}
               opacity={currentScreen==="AboutApp"?1:.6}
               >About App</Text>
