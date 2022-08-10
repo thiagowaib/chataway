@@ -1,20 +1,22 @@
+import React from "react"
 import { Box, VStack, Text, Pressable, Center } from "native-base"
 import { Linking } from "react-native"
 import { Header } from "../../components"
 export default function AboutApp(){
 
   const openRepo = async() => {
-    const repoUrl = `https://github.com/thiagowaib/wpp-url-texter#whatsapp-url-texter`
+    const repoUrl = `https://github.com/thiagowaib/chataway#readme`
 
     await Linking.canOpenURL(repoUrl)
-    Linking.openURL(repoUrl)
+    .then(()=>Linking.openURL(repoUrl))
   }
 
   const openDevProfile = async() => {
     const profileUrl = `https://github.com/thiagowaib`
 
     await Linking.canOpenURL(profileUrl)
-    Linking.openURL(profileUrl)
+    .then(()=>Linking.openURL(profileUrl))
+    
   }
 
   return (
@@ -28,23 +30,23 @@ export default function AboutApp(){
       <VStack
       safeArea
       >
-      <Header screenName={"AboutApp"}/>
+      <Header/>
       <Text
       color={"secondary.200"}
       mt={10}
       fontSize={16}
       textAlign={"center"}
       >
-        This is a personal project by
+        Esse aplicativo é um projeto pessoal por
       </Text>
       <Text
-      color={"purple.200"}
+      color={"green.200"}
       fontWeight={700}
       fontSize={16}
       textAlign={"center"}
       onPress={openDevProfile}
       >
-        @thiagowaib at Github.
+        @thiagowaib no Github.
       </Text>
       <Text
       color={"secondary.200"}
@@ -52,8 +54,8 @@ export default function AboutApp(){
       textAlign={"center"}
       fontSize={16}
       >
-        You can visit the project’s page with the 
-        button below to view the whole documentation. 👌
+        Você pode visitar a página do projeto com o 
+        botão abaixo para ver a documentação na íntegra.👌
       </Text>
       <Center>
           <Pressable
@@ -63,18 +65,18 @@ export default function AboutApp(){
           mt={6}
           borderRadius={20}
           borderWidth={2}
-          borderColor={"purple.200"}
+          borderColor={"green.200"}
           onPress={openRepo}
           _pressed={{
-            background: "#9783A920"
+            background: "#1A9C9420"
           }}
           >
             <Text
             fontWeight={'bold'}
-            color="purple.200"
+            color="green.200"
             fontSize={16}
             >
-              Open Project Repository
+              Visitar Projeto
             </Text>
           </Pressable>
         </Center>

@@ -1,32 +1,21 @@
-import { VStack, Text, Divider } from 'native-base'
 import React from 'react'
+import { VStack, Text, Divider } from 'native-base'
 
-interface HeaderProps {
-    screenName: "UrlTexter" | "AboutApp"
-}
-
-export default function Header(props: HeaderProps) {
+export default function Header() {
 
     const getWelcome = () => {
         const hours = new Date().getHours()
         let welcome = ''
         
         if(hours >= 6 && hours < 12)
-            welcome = "Good Morning! 🌅"
+            welcome = "Bom dia! 🌅"
         else if(hours >= 12 && hours < 18)
-            welcome = "Good Afternoon! ☀️"
+            welcome = "Boa tarde! ☀️"
         else if(hours >= 18 && hours < 0)
-            welcome = "Good Evening! 🌙"
+            welcome = "Boa noite! 🌙"
         else
-            welcome = "Howdy, Night Owl🦉"
+            welcome = "Boa Madrugada! 🦉"
         return welcome
-    }
-
-    const getColor = () => {
-        if (props.screenName === "UrlTexter")
-            return "green.200"
-        else if (props.screenName === "AboutApp")
-            return "purple.200"
     }
 
   return (
@@ -37,11 +26,11 @@ export default function Header(props: HeaderProps) {
         fontWeight={700}
         >{getWelcome()}</Text>
         <Divider
-        bg={getColor()}
+        bg={"green.200"}
         width={150}
         mt={2}
         borderWidth={1.5}
-        borderColor={getColor()}
+        borderColor={"green.200"}
         borderRadius={100}
         />
     </VStack>

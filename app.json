@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Whatsapp URL Texter",
-    "slug": "wpp-url-texter",
+    "name": "ChatAway",
+    "slug": "wpp-chat-away",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -26,7 +26,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#282828"
       },
-      "package": "com.thiagowaib.wppurltexter"
+      "package": "com.thiagowaib.wppchataway"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"

@@ -10,10 +10,6 @@ export default function App() {
           100: '#117900',
           200: '#1A9C94'
         },
-        purple: {
-          100: '#54387F',
-          200: '#9783A9',
-        },
         secondary: {
           100: '#282828',
           200: '#A2A2A2',

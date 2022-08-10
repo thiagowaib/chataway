@@ -1,3 +1,4 @@
+import React from "react"
 import { Box, VStack, Text, Select, HStack, Center, Button, Pressable } from "native-base"
 import { AntDesign } from "@expo/vector-icons"
 import MaskInput from 'react-native-mask-input'
@@ -44,7 +45,7 @@ export default function UrlTexter(){
     const wppUrl = `https://wa.me/${formatedNumber}`
 
     await Linking.canOpenURL(wppUrl)
-    Linking.openURL(wppUrl)
+    .then(()=>Linking.openURL(wppUrl))
   }
 
   const clearInput = () => {
@@ -64,7 +65,7 @@ export default function UrlTexter(){
       <VStack
       safeArea
       >
-      <Header screenName={"UrlTexter"}/>
+      <Header/>
       <Text
       color={"secondary.200"}
       mt={10}
@@ -72,9 +73,9 @@ export default function UrlTexter(){
       lineHeight={20}
       textAlign={"center"}
       >
-        Insert a phone number below in order 
-        to open a conversation on Whatsapp 
-        without saving the contact
+        Insira um numero de telefone abaixo 
+        para abrir a conversa no Whatsapp  
+        sem precisar salvar o contato
       </Text>
       <HStack
       mt={8}
@@ -157,7 +158,7 @@ export default function UrlTexter(){
             color="secondary.400"
             fontSize={16}
             >
-              Open Conversation
+              Abrir Conversa
             </Text>
           </Pressable>
           <Text
@@ -167,9 +168,8 @@ export default function UrlTexter(){
           fontWeight={300}
           textAlign={"center"}
           >
-        This will only open the chat, 
-        but won’t send any unwanted messages, 
-        don’t worry! 😉
+        Isso vai apenas abrir a conversa, 
+        sem enviar nenhuma mensagem indesejada! 😉
       </Text>
         </Center>
       </VStack>

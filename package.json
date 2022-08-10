@@ -1,9 +1,16 @@
 {
   "name": "wpp-url-texter",
   "version": "1.0.0",
+  "homepage": "https://github.com/thiagowaib/chataway#readme",
+  "author": {
+    "name": "Thiago Waib",
+    "email": "thiagowaib@gmail.com",
+    "url": "https://www.linkedin.com/in/thiagowaib/"
+  },
+  "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start --localhost --android",
+    "start": "expo start --android",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
