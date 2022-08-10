@@ -73,7 +73,7 @@ export default function UrlTexter(){
       lineHeight={20}
       textAlign={"center"}
       >
-        Insira um numero de telefone abaixo 
+        Insira um número de celular abaixo 
         para abrir a conversa no Whatsapp  
         sem precisar salvar o contato
       </Text>
