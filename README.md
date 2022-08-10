@@ -10,7 +10,7 @@ width="auto" alt="Banner">
 ## 💻 Onde fazer o download?
 
 <img src="https://raw.githubusercontent.com/thiagowaib/chataway/main/.github/Model.png" 
-width="10%" alt="Modelo" style="float: right">
+width="10%" alt="Modelo" float="right">
 
 Por enquanto o download pode ser feito diretamente através do link abaixo, contando que:
 * Você tenha um celular Android
